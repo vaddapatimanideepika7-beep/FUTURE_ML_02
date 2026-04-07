@@ -9,6 +9,11 @@
 # ## Step 1 — Import Libraries
 import streamlit as st
 st.title("Ticket Classifier")
+import nltk
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 # In[1]:
 import re
 import string
