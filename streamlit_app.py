@@ -10,10 +10,19 @@
 import streamlit as st
 st.title("Ticket Classifier")
 import nltk
+import nltk
+
+# Download punkt
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
+
+# Download stopwords
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 # In[1]:
 import re
 import string
